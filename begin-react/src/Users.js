@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState,
+  useEffect
+} from 'react';
 import axios from 'axios';
 
 function Users() {
@@ -26,18 +29,24 @@ function Users() {
     fetchUsers();
   }, []);
 
-  if (loading) return <div>로딩중...</div>;
-  if (error) return <div>에러가 발생했습니다.</div>;
+  if (loading) return <div > 로딩중... < /div>;
+  if (error) return <div > 에러가 발생했습니다. < /div>;
   if (!users) return null;
 
-  return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>
-          {user.username} ({user.name})
-        </li>
-      ))}
-    </ul>
+  return ( <
+    ul > {
+      users.map(user => ( <
+        li key = {
+          user.id
+        } > {
+          user.username
+        }({
+          user.name
+        }) <
+        /li>
+      ))
+    } <
+    /ul>
   );
 }
 
