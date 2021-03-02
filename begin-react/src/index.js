@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Hello from './Hello';
 import Counter from './Counter';
 
 ReactDOM.render(<Counter />, document.getElementById('root'));
