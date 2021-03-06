@@ -13,9 +13,9 @@ function TodoList() {
     <TodoListBlock>
       <TodoItem text="프로젝트 생성하기" done={true} />
       <TodoItem text="리액트 공부하기" done={true} />
-      <TodoItem text="프로바이더 웹 만들기" done={true} />
-      <TodoItem text="Context 만들기" done={true} />
-      <TodoItem text="기능 구현하기" done={true} />
+      <TodoItem text="프로바이더 웹 만들기" done={false} />
+      <TodoItem text="Context 만들기" done={false} />
+      <TodoItem text="기능 구현하기" done={false} />
     </TodoListBlock>
   );
 }

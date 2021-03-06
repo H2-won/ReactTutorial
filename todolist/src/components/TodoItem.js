@@ -20,6 +20,7 @@ const CheckCircle = styled.div`
       color: #38d9a9;
     `}
 `;
+
 const Text = styled.div`
   flex: 1;
   font-size: 21px;
@@ -30,6 +31,7 @@ const Text = styled.div`
       color: #ced4da;
     `}
 `;
+
 const Remove = styled.div`
   opacity: 0;
   display: flex;
@@ -42,6 +44,7 @@ const Remove = styled.div`
     color: #ff6b6b;
   }
 `;
+
 const TodoItemBlock = styled.div`
   display: flex;
   align-items: center;
@@ -54,7 +57,7 @@ const TodoItemBlock = styled.div`
   }
 `;
 
-function TodoItem(id, done, text) {
+function TodoItem({ id, done, text }) {
   return (
     <TodoItemBlock>
       <CheckCircle done={done}>{done && <MdDone />}</CheckCircle>
