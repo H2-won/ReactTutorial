@@ -1,7 +1,8 @@
-import React from "react";
-import { Route, Link } from "react-router-dom";
-import Home from "./Home.js";
-import About from "./About.js";
+import React from 'react';
+import { Route, Link } from 'react-router-dom';
+import Home from './Home.js';
+import About from './About.js';
+import Profile from './Profile.js';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <hr />
       <Route path="/" component={Home} exact />
       <Route path="/about" component={About} />
+      <Route path="/profile/:username" component={Profile} />
     </div>
   );
 }
