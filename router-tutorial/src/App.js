@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import Home from './Home.js';
-import About from './About.js';
-import Profile from './Profile.js';
+import About from './About';
+import Home from './Home';
+import Profiles from './Profiles';
 
-function App() {
+const App = () => {
   return (
     <div>
       <ul>
@@ -14,13 +14,16 @@ function App() {
         <li>
           <Link to="/about">소개</Link>
         </li>
+        <li>
+          <Link to="/profiles">프로필 목록</Link>
+        </li>
       </ul>
       <hr />
-      <Route path="/" component={Home} exact />
+      <Route path="/" exact={true} component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/profile/:username" component={Profile} />
+      <Route path="/profiles" component={Profiles} />
     </div>
   );
-}
+};
 
 export default App;
