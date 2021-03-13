@@ -2,7 +2,7 @@ import React from 'react';
 
 const profileDate = {
   velopert: {
-    name: '임희원',
+    name: 'LIM HUI',
     description: 'Frontend Enginner @ HUI',
   },
   homer: {
