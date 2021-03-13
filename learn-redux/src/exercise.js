@@ -6,11 +6,13 @@ const initialState = {
   list: [],
 };
 
+// 액션 타입 선언
 const INCREASE = 'INCREASE';
 const DECREASE = 'DECREASE';
 const CHANGE_TEXT = 'CHANGE_TEXT';
 const ADD_TO_LIST = 'ADD_TO_LIST';
 
+// 액션 생성 함수
 const increase = () => ({
   type: INCREASE,
 });
