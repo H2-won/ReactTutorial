@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import Profile from './Profile';
+import RouterHookSample from './RouterHookSample';
 
 const Profiles = () => {
   const a = 'asdasd';
@@ -27,6 +28,7 @@ const Profiles = () => {
         render={({}) => <div>사용자를 {a} 선택해주세요.</div>}
       />
       <Route path="/profiles/:username" component={Profile} />
+      <RouterHookSample />
     </div>
   );
 };
