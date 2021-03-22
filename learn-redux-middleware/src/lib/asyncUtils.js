@@ -9,13 +9,13 @@ export const createPromiseThunk = (type, promiseCreator) => {
       dispatch({
         type: SUCCESS,
         payload,
-      });
+      }); // 성공
     } catch (e) {
       dispatch({
         type: ERROR,
         payload: e,
         error: true,
-      });
+      }); // 실패
     }
   };
 };
@@ -38,7 +38,7 @@ export const handleAsyncActions = (type, key) => {
       case ERROR:
         return {
           ...state,
-          [key]: reducerUtils.error(action.payload),
+          [key]: reducerUtils.error(action.error),
         };
       default:
         return state;
