@@ -8,12 +8,10 @@ function PostListContainer() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // 새로고침할 떄 이미 데이터가 있다면 리랜더링x
-    if (data) return;
     dispatch(getPosts());
-  }, [dispatch, data]);
+  }, [dispatch]);
 
-  if (loading) return <div>PostListContainer 로딩중...</div>;
+  if (loading && !data) return <div>PostListContainer 로딩중...</div>;
   if (error) return <div>에러 발생!</div>;
   if (!data) return null;
   return <PostList posts={data} />;

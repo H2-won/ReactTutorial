@@ -15,15 +15,18 @@ const GET_POST = 'GET_POST';
 const GET_POST_SUCCESS = 'GET_POST_SUCCESS';
 const GET_POST_ERROR = 'GET_POST_ERROR';
 
+const CLEAR_POST = 'CLEAR_POST';
+
 export const getPosts = createPromiseThunk(GET_POSTS, postsAPI.getPosts);
 export const getPost = createPromiseThunk(GET_POST, postsAPI.getPostById);
+export const clearPost = () => ({ type: CLEAR_POST });
 
 const initialState = {
   posts: reducerUtils.initial(),
   post: reducerUtils.initial(),
 };
 
-const getPostsReducer = handleAsyncActions(GET_POSTS, 'posts');
+const getPostsReducer = handleAsyncActions(GET_POSTS, 'posts', true);
 const getPostReducer = handleAsyncActions(GET_POST, 'post');
 
 export default function posts(state = initialState, action) {
@@ -38,6 +41,11 @@ export default function posts(state = initialState, action) {
     case GET_POST_ERROR:
       return getPostReducer(state, action);
     // 위 3개의 액션 중 하나라면, 해당 리듀서를 실행한다는 뜻
+    case CLEAR_POST:
+      return {
+        ...state,
+        post: reducerUtils.initial(),
+      };
     default:
       return state;
   }

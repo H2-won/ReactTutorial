@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPost } from '../modules/posts';
+import { clearPost, getPost } from '../modules/posts';
 import Post from '../components/Post';
 
 function PostContainer({ postId }) {
@@ -9,6 +9,10 @@ function PostContainer({ postId }) {
 
   useEffect(() => {
     dispatch(getPost(postId));
+    // return 부분 클리어 함수는 component가 unmount될때나, postId가 바뀌는 경우 윗 줄의 Effect 함수인 dispatch가 실행되기 전에 실행된다.
+    return () => {
+      dispatch(clearPost());
+    };
   }, [postId, dispatch]);
 
   if (loading) return <div>로딩중...</div>;
