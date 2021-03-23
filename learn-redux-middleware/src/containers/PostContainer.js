@@ -15,7 +15,7 @@ function PostContainer({ postId }) {
     // 이미 data가 있다면 api 호출 안함
     if (data) return;
     dispatch(getPost(postId));
-  }, [postId, dispatch]);
+  }, [postId, dispatch, data]);
 
   if (loading && !data) return <div>로딩중...</div>;
   if (error) return <div>에러 발생!</div>;
