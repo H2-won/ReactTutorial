@@ -12,7 +12,7 @@ function PostContainer({ postId }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // 이미 data가 있다면 api 호출을 안함
+    // 이미 data가 있다면 api 호출 안함
     if (data) return;
     dispatch(getPost(postId));
   }, [postId, dispatch]);

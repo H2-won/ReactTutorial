@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "리덕스 미들웨어 배우기",
+      "body": "리덕스 미들웨어 Promise 예시"
+    },
+    {
+      "id": 2,
+      "title": "redux-thunk 배우기",
+      "body": "redux-thunk 사용해서 비동기 작업 처리해보자"
+    },
+    {
+      "id": 3,
+      "title": "redux-saga 배우기",
+      "body": "redux-saga로 비동기 작업 하는 것도 배울 것이다."
+    },
+    {
+      "title": "안녕하세요.",
+      "body": "바꾸기!",
+      "id": 4
+    }
+  ]
+}
