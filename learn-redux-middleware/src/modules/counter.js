@@ -8,8 +8,6 @@ const DECREASE_ASYNC = 'DECREASE_ASYNC';
 export const increase = () => ({ type: INCREASE });
 export const decrease = () => ({ type: DECREASE });
 
-function* increaseSaga() {}
-
 // 정확히 따지자면 dispatch => 여기부터 thunk 함수이다. 전체는 thunk함수 크리에이터이다.
 // 1초 딜레이
 // export const increaseAsync = () => (dispatch) => {
